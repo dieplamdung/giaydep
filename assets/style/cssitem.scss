@@ -1,0 +1,180 @@
+$mobile: "(max-width: 739px)";
+$tablet: "(min-width: 740px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
+.content__giay {
+    margin-top: 14px;
+    position: relative;
+
+    .content__giay-item {
+        border: 1px solid #cdcdcd;
+        padding: 10px;
+        transition: all 0.5s;
+        position: relative;
+        display: block;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+        }
+
+        .content__giay-name {
+            margin: 6px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .content__giay-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                font-size: 1.2rem;
+
+                @media #{$tablet} {
+                    font-size: 1rem;
+                }
+            }
+
+            .content__giay-price-old {
+                font-size: 0.8rem;
+                font-weight: 600;
+                margin: 0 16px;
+                text-decoration-line: line-through;
+                text-shadow: 3px 3px 3px #cdcdcd;
+
+                @media #{$tablet} {
+                    font-size: 0.6rem;
+                }
+            }
+
+            .content__giay-price-new {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--background-color);
+                text-shadow: 3px 3px 3px #cdcdcd;
+
+                @media #{$tablet} {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .content__giay-like {
+            display: flex;
+            padding: 6px 0;
+            align-items: center;
+
+            p {
+                font-size: 1.2rem;
+                margin-right: 6px;
+
+                @media #{$tablet} {
+                    font-size: 1rem;
+                }
+            }
+
+            i {
+                padding: 0 1px;
+
+                @media #{$tablet} {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .content__giay-like--active {
+                color: yellowgreen;
+            }
+        }
+
+        .content__giay-btn {
+            width: 100%;
+            text-align: center;
+            padding: 8px 0;
+
+            button {
+                padding: 8px 12px;
+                background-color: var(--background-color);
+                color: var(--text-color-white);
+                border: none;
+                border-radius: 4px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: rgb(241, 121, 121);
+            }
+        }
+
+        .content__giay-item--new {
+            position: absolute;
+            background-color: var(--background-color);
+            top: 9px;
+            left: 0px;
+            -webkit-transform: rotate(-46deg);
+            transform: rotate(-45deg);
+
+            p {
+                color: var(--text-color-white);
+                position: relative;
+            }
+
+            ::before {
+                content: "";
+                position: absolute;
+                left: -18px;
+                bottom: 0;
+                border-top: 9px solid transparent;
+                border-bottom: 9px solid var(--background-color);
+                border-right: 9px solid transparent;
+                border-left: 9px solid var(--background-color);
+                -webkit-transform: rotate(-46deg);
+                transform: rotate(-90deg);
+            }
+
+            ::after {
+                content: "";
+                position: absolute;
+                bottom: 0px;
+                right: -18px;
+                border-top: 9px solid transparent;
+                border-bottom: 9px solid var(--background-color);
+                border-right: 9px solid transparent;
+                border-left: 9px solid var(--background-color);
+                -webkit-transform: rotate(-46deg);
+                transform: rotate(0deg);
+            }
+
+
+        }
+
+        .content__giay-item-saleoff {
+            position: absolute;
+            text-align: center;
+            align-items: center;
+            background-color: var(--background-color);
+            padding: 6px;
+            top: -1px;
+            right: -1px;
+            border-bottom-left-radius: 2px;
+
+            .saletext {
+                color: var(--text-color-white);
+                font-size: 0.8rem;
+            }
+
+            .salenumber {
+                color: var(--text-color-white);
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .content__giay-item:hover {
+        box-shadow: 2px 0px 5px #cdcdcd;
+        transform: scale(1.014);
+    }
+
+}

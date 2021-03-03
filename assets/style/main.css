@@ -1,0 +1,8 @@
+:root {
+    --text-color-white: white;
+    --text-color-black: black;
+    --background-color: #EA1D1D;
+
+    --header-height: 140px;
+    --header-height-top:80px;
+}
